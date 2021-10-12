@@ -1,0 +1,105 @@
+:root {
+  /* ***  BACKGROUNDS *** */
+  /* screen background */
+  --background: hsl(222, 26%, 31%);
+  /* keypad background  */
+  --keypad: hsl(223, 31%, 20%);
+  /* toggle background  */
+  --toggleBackground: hsl(223, 31%, 20%);
+  /* display background */
+  --display: hsl(224, 36%, 15%);
+
+  /* ***  END OF BACKGROUNDS  *** */
+
+  /* ***  KEYS *** */
+  /* key background */
+  --key: hsl(225, 21%, 49%);
+  --keyShadow: hsl(224, 28%, 35%);
+  --outputKey: hsl(30, 25%, 89%);
+  --outputKeyShadow: hsl(28, 16%, 65%);
+  --toggle: hsl(6, 63%, 50%);
+  --toggleShadow: hsl(6, 70%, 34%);
+  /* ***  END OF KEYS *** */
+
+  /* ***  TEXT *** */
+  /* text */
+  --mainText: #fff;
+  --secondaryText: hsl(221, 14%, 31%);
+  /* ***  END OF TEXT *** */
+  
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: var(--background);
+  color: var(--mainText);
+  font-size: 32px;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+#main {
+  border: 1px solid #fff;
+  height: 70vh;
+  width: 40%;
+  margin: 10vh auto;
+  /* height: 80vh;
+  width: 80vw; */
+}
+
+#header {
+  background: #dc143c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: .3em;
+}
+
+
+
+
+
+.themes {
+  display: flex;
+  align-items: center;
+  border: 1px solid yellow;
+}
+
+#theme-options-wrapper {
+  display: flex;
+  justify-content: center; }
+
+.theme-dot {
+  height: 15px;
+  width: 15px;
+  background-color: #000;
+  border-radius: 50%;
+  margin: 4px;
+  border: 2px solid var(--themeDotBoarder);
+  box-shadow: -1px 1px 4px -1px rgba(0, 0, 0, 0.75);
+  cursor: pointer; }
+
+.theme-dot:hover {
+  border-width: 5px; }
+
+#light-mode {
+  background-color: #fff; }
+
+#blue-mode {
+  background-color: #192734; }
+
+#green-mode {
+  background-color: #78866b; }
+
+
+/* media query */
+
+@media screen and (max-width: 768px) {
+  #main {
+    width: 70%;
+  }
+}

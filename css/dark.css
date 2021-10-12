@@ -1,0 +1,30 @@
+:root {
+    /* ***  BACKGROUNDS *** */
+    /* screen background */
+    --background: hsl(268, 75%, 9%);
+    /* keypad background  */
+    --keypad: hsl(268, 71%, 12%);
+    /* toggle background  */
+    --toggleBackground: hsl(268, 71%, 12%);
+    /* display background */
+    --display: hsl(268, 71%, 12%);
+
+    /* ***  END OF BACKGROUNDS  *** */
+
+    /* ***  KEYS *** */
+    /* key background */
+    --key: hsl(281, 89%, 26%);
+    --keyShadow: hsl(285, 91%, 52%);
+    --outputKey: hsl(268, 47%, 21%);
+    --outputKeyShadow: hsl(290, 70%, 36%);
+    --toggle:  hsl(176, 100%, 44%);
+    --toggleShadow: hsl(177, 92%, 70%);
+    /* ***  END OF KEYS *** */
+
+    /* ***  TEXT *** */
+    /* text */
+    --mainText: hsl(52, 100%, 62%);
+    --secondaryText: hsl(0, 0, 100%);
+    --thirdText: hsl(198, 20%, 13%);
+    /* ***  END OF TEXT *** */
+}
