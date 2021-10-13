@@ -207,7 +207,8 @@ button:hover {
   transform: scale(.98);
 }
 button:active {
-  transform: scale(.95);
+  transition: .1s;
+  transform: scale(.94);
   opacity: .8;
 }
 
