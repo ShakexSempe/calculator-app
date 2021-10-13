@@ -92,47 +92,57 @@ body {
 }
 #theme-options-wrapper {
   display: flex;
-  justify-content: center; }
+  justify-content: center; 
+  position: relative;
+}
 
 .theme-dot {
   height: 15px;
   width: 15px;
-  background-color: #000;
+  background-color: transparent;
   border-radius: 50%;
   margin: 4px;
-  border: 2px solid var(--themeDotBoarder);
-  box-shadow: -1px 1px 4px -1px rgba(0, 0, 0, 0.75);
-  cursor: pointer; 
+  border: none;
+  cursor: pointer;
+  transition: .3s ease; 
 }
-
+.theme-dot span {
+  opacity: 1;
+  position: absolute;
+  top: -100%;
+  color: var(--mainText);
+  display: block;
+}
 /* .theme-dot:hover {
   opacity: 1;
 } */
 
 #style-mode {
-  background-color: hsl(6, 63%, 50%);
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 #style-mode.active {
+  background-color: hsl(6, 63%, 50%);
   opacity: 1;
 }
 
 #light-mode {
-  background-color: hsl(25, 98%, 40%);
-  opacity: 0;
+  /* opacity: 0; */
 
 }
 #light-mode.active {
+  background-color: hsl(25, 98%, 40%);
   opacity: 1;
 }
 #dark-mode {
-  background-color: hsl(176, 100%, 44%);
-  opacity: 0;
+  /* opacity: 0; */
 }
 #dark-mode.active {
   opacity: 1;
+  background-color: hsl(176, 100%, 44%);
+
 }
+
 
 /* media query */
 
