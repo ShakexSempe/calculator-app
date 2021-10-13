@@ -57,7 +57,7 @@ body {
 
 .container {
   background: var(--background);
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   padding: 10vh 5vw;
 }
@@ -161,7 +161,7 @@ body {
 #keyGrid {
   border: none;
   outline: none;
-  height: 55vh;
+  height: auto;
   width: 100%;
   margin-bottom: 5vh;
   /* height: 60vh; */
@@ -189,6 +189,7 @@ button {
   color: var(--secondaryText);
   cursor: pointer;
   position: relative;
+  transition: .2s ease;
 }
 
 button::after {
@@ -201,9 +202,14 @@ button::after {
   border-radius: 5px;
   box-shadow: inset 0 -5px 2px var(--outputKeyShadow);
 }
-button:hover {
-  background-color: #eaeaea;
+/* button:hover {
+  opacity: .9;
+  transform: scale(.98);
 }
+button:active {
+  transform: scale(.95);
+  opacity: .8;
+} */
 
 .operator {
   color: var(--secondaryText);
