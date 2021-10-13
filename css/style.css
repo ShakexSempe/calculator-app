@@ -161,7 +161,7 @@ body {
 #keyGrid {
   border: none;
   outline: none;
-  height: auto;
+  height: 55vh;
   width: 100%;
   margin-bottom: 5vh;
   /* height: 60vh; */
@@ -171,8 +171,8 @@ body {
   display: grid;
   gap: .5em;
   place-items: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr 1fr 1fr 10vh;
 }
 
 button {
@@ -184,10 +184,10 @@ button {
   border-radius: 5px;
   border: none;
   background-color: var(--outputKey);
-  font-size: .5em;
+  font-size: .7em;
   padding: .5em;
   color: var(--secondaryText);
-  cursor: pointer;
+  cursor: pointer
 }
 button:hover {
   background-color: #eaeaea;
@@ -200,8 +200,17 @@ button:hover {
 button.equal-sign {
   background-color: var(--toggle);
   color: var(--mainText);
+  grid-column-start: 3;
+  grid-column-end: 5;
 }
 button.clear {
+  background-color: var(--key);
+  color: var(--mainText);
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+}
+button.del {
   background-color: var(--key);
   color: var(--mainText);
 }
