@@ -41,7 +41,7 @@ body {
   font-size: 32px;
   width: 100vw;
   display: grid;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 #main {
@@ -141,10 +141,27 @@ body {
 .output {
   color: var(--mainText);
 }
+
+
+#keyGrid {
+  border: none;
+  outline: none;
+  height: 60vh;
+  border-radius: 10px;
+  background-color: var(--keypad);
+  display: grid;
+  place-items: center;
+}
+
+
 /* media query */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .container {
-    padding: 10vh 25vw;
+    padding: 10vh 30vw;
+  }
+
+  #keyGrid {
+    height: 55vh;
   }
 }
 
