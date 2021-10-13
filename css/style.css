@@ -202,14 +202,14 @@ button::after {
   border-radius: 5px;
   box-shadow: inset 0 -5px 2px var(--outputKeyShadow);
 }
-/* button:hover {
+button:hover {
   opacity: .9;
   transform: scale(.98);
 }
 button:active {
   transform: scale(.95);
   opacity: .8;
-} */
+}
 
 .operator {
   color: var(--secondaryText);
