@@ -1,5 +1,10 @@
 
-let theme = localStorage.getItem('theme')
+let theme = localStorage.getItem('theme');
+let style = document.getElementById('style-mode');
+let light = document.getElementById('light-mode');
+let dark = document.getElementById('dark-mode');
+
+
 
 if(theme == null){
     setTheme('light')
@@ -22,16 +27,23 @@ for (var i=0; themeDots.length > i; i++){
 function setTheme(mode){
     if(mode == 'style'){
         document.getElementById('theme-style').href = 'css/style.css';
-        let toggle = document.getElementById('style-mode');
-        console.log(toggle);
-        // toggle.classList.toggle('active');
-        // toggle.classList.toggle(".active"); 
+        // console.log(toggle);
+        style.classList.add('active');
+        light.classList.remove("active"); 
+        dark.classList.remove("active"); 
     }
     if(mode == 'light'){
         document.getElementById('theme-style').href = 'css/light.css'
+        light.classList.add('active');
+        console.log(light);
+        style.classList.remove('active');
+        dark.classList.remove('active');
     }
     if(mode == 'dark'){
         document.getElementById('theme-style').href = 'css/dark.css'
+        light.classList.remove('active');
+        style.classList.remove('active');
+        dark.classList.add('active');
     }
     localStorage.setItem('theme', mode)
 }

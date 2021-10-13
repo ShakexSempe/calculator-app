@@ -102,29 +102,37 @@ body {
   margin: 4px;
   border: 2px solid var(--themeDotBoarder);
   box-shadow: -1px 1px 4px -1px rgba(0, 0, 0, 0.75);
-  cursor: pointer;
-  opacity: 0; 
+  cursor: pointer; 
 }
 
-.theme-dot:hover {
+/* .theme-dot:hover {
   opacity: 1;
-}
+} */
 
 #style-mode {
   background-color: hsl(6, 63%, 50%);
-  /* opacity: 0; */
-
+  opacity: 0;
 }
 
-#style-mode .active {
+#style-mode.active {
   opacity: 1;
 }
+
 #light-mode {
-  background-color: hsl(25, 98%, 40%); }
+  background-color: hsl(25, 98%, 40%);
+  opacity: 0;
 
+}
+#light-mode.active {
+  opacity: 1;
+}
 #dark-mode {
-  background-color: hsl(176, 100%, 44%); }
-
+  background-color: hsl(176, 100%, 44%);
+  opacity: 0;
+}
+#dark-mode.active {
+  opacity: 1;
+}
 
 /* media query */
 
