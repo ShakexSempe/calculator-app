@@ -42,7 +42,7 @@ body {
   width: 100vw;
   display: grid;
   /* gap: 10vh; */
-  /* overflow: hidden; */
+  overflow-x: hidden;
 }
 
 #main {
@@ -172,7 +172,7 @@ body {
   gap: .5em;
   place-items: center;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr 1fr 1fr 1fr 10vh;
+  grid-template-rows: repeat(5, 10vh);
 }
 
 button {
@@ -208,7 +208,7 @@ button:hover {
 }
 button:active {
   transition: .1s;
-  transform: scale(.94);
+  transform: scale(.9);
   opacity: .8;
 }
 
@@ -263,7 +263,7 @@ button.clear::after , button.del::after {
   }
 
   #keyGrid {
-    height: 55vh;
+    height: auto;
   }
 }
 
