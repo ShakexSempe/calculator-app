@@ -187,7 +187,19 @@ button {
   font-size: .7em;
   padding: .5em;
   color: var(--secondaryText);
-  cursor: pointer
+  cursor: pointer;
+  position: relative;
+}
+
+button::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  box-shadow: inset 0 -5px 2px var(--outputKeyShadow);
 }
 button:hover {
   background-color: #eaeaea;
@@ -202,6 +214,18 @@ button.equal-sign {
   color: var(--mainText);
   grid-column-start: 3;
   grid-column-end: 5;
+  position: relative;
+}
+
+button.equal-sign::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  box-shadow: inset 0 -5px 2px var(--toggleShadow);
 }
 button.clear {
   background-color: var(--key);
@@ -214,6 +238,17 @@ button.del {
   background-color: var(--key);
   color: var(--mainText);
 }
+
+button.clear::after , button.del::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 -5px 2px var(--keyShadow);
+}
+
 /* media query */
 @media screen and (min-width: 1024px) {
   .container {
