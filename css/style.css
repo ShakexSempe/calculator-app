@@ -63,7 +63,7 @@ body {
   background: var(--background);
   min-height: 100vh;
   width: 100%;
-  padding: 10vh 5vw;
+  padding: 5vh 5vw;
 }
 
 #header {
@@ -110,7 +110,7 @@ body {
   content: '';
   top: 0;
   left: 0;
-  opacity: .3;
+  opacity: .2;
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -156,13 +156,15 @@ body {
   border: none;
   outline: none;
   height: 15vh;
-  margin: 5vh 0;
+  height: auto;
+  margin: 1em 0;
   border-radius: 10px;
   background-color: var(--display);
   display: flex;
   justify-content: right;
   align-items: center;
   padding: .5em;
+  padding: 1em .5em;
 }
 
 #display input {
@@ -188,7 +190,7 @@ body {
   width: 100%;
   margin-bottom: 5vh;
   /* height: 60vh; */
-  padding: 1em;
+  padding: 1em .5em;
   border-radius: 10px;
   background-color: var(--keypad);
   display: grid;
@@ -199,20 +201,19 @@ body {
 }
 
 button {
-  text-transform: uppercase;
-  letter-spacing: 0;
   height: 100%;
   width: 100%;
-  background-color: #fff;
-  border-radius: 5px;
   border: none;
+  outline: none;
+  border-radius: 10px;
   background-color: var(--outputKey);
-  font-size: .7em;
-  padding: .5em;
   color: var(--keypadText);
+  font-size: 1em;
+  padding: .5em;
   cursor: pointer;
-  position: relative;
+  overflow: hidden;
   transition: .2s ease;
+  position: relative;
 }
 
 button::after {
@@ -222,7 +223,7 @@ button::after {
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: inset 0 -5px 2px var(--outputKeyShadow);
 }
 button:hover {
@@ -245,6 +246,7 @@ button.equal-sign {
   grid-column-start: 3;
   grid-column-end: 5;
   position: relative;
+  font-size: .5em;
 }
 
 button.equal-sign::after {
@@ -262,11 +264,16 @@ button.clear {
   color: var(--clearButton);
   grid-column-start: 1;
   grid-column-end: 3;
+  font-size: .5em;
+  text-transform: uppercase;
 
 }
 button.del {
   background-color: var(--key);
   color: var(--delButton);
+  font-size: .5em;
+  text-transform: uppercase;
+
 }
 
 button.clear::after , button.del::after {
@@ -285,8 +292,19 @@ button.clear::after , button.del::after {
     padding: 10vh 30vw;
   }
 
+  #display {
+    margin: .5em 0;
+  }
+  #display input {
+    padding: 0em .5em;
+  }
   #keyGrid {
     height: auto;
+    padding: 1em;
+  }
+  button {
+    padding: 0em;
+    height: 80%;
   }
 }
 
