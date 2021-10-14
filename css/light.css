@@ -25,6 +25,11 @@
     /* text */
     --mainText: hsl(60, 10%, 19%);
     --secondaryText: hsl(0, 0, 100%);
+  --keypadText: hsl(60, 10%, 19%);
+
+    --delButton: #fff;
+  --clearButton: #fff;
+  --equalButton: #fff;
     /* ***  END OF TEXT *** */
 
 }
