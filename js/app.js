@@ -47,7 +47,6 @@ keys.addEventListener('click', e => {
         if (!action) {
             if (displayedNum === '0') {
                 display.textContent = keyContent;
-                console.log('jdjdjjdjd');
             } else {
                 display.textContent = displayedNum + keyContent;
             }
