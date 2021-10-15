@@ -1,5 +1,7 @@
 const calculator = document.querySelector('.calculator');
 const keys = calculator.querySelector('.keyGrid');
+const display = document.querySelector('.calculator-screen');
+
 
 
 
@@ -8,8 +10,12 @@ const keys = calculator.querySelector('.keyGrid');
 
 keys.addEventListener('click', e => {
     if (e.target.matches('button')) {
+        // function variables
         const key = e.target;
         const action = key.dataset.action;
+        const keyContent = key.textContent;
+        const displayedNum = display.textContent;
+        // if statement
         if (!action) {
             console.log('number key!')
         }
@@ -35,7 +41,25 @@ keys.addEventListener('click', e => {
             console.log('delete key')
         }
 
+
+        
+        // if state
+        if (!action) {
+            if (displayedNum === '0') {
+                display.textContent = keyContent;
+                console.log('jdjdjjdjd');
+            } else {
+                display.textContent = displayedNum + keyContent;
+            }
+        }
     }
 });
 
+// keys.addEventListener('click', e => {
+//     if (e.target.matches('button')) {
+//         const key = e.target;
+//         const action = key.dataset.action;
+        
+//     }
+// })
 
