@@ -19,58 +19,58 @@
 <body>
 
   <div id="main">
-    <div class="container">
-    <header id="header">
-      <h1>calc</h1>
-      <div class="themes">
-        <h2>THEME</h2>
-        <div id="theme-options-wrapper">
-          <div data-mode="style" id="style-mode" class="theme-dot"><span>1</span></div>
-          <div data-mode="light" id="light-mode" class="theme-dot"><span>2</span></div>
-          <div data-mode="dark" id="dark-mode" class="theme-dot"><span>3</span></div>
+    <div class="calculator">
+      <header id="header">
+        <h1>calc</h1>
+        <div class="themes">
+          <h2>THEME</h2>
+          <div id="theme-options-wrapper">
+            <div data-mode="style" id="style-mode" class="theme-dot"><span>1</span></div>
+            <div data-mode="light" id="light-mode" class="theme-dot"><span>2</span></div>
+            <div data-mode="dark" id="dark-mode" class="theme-dot"><span>3</span></div>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
 
-    <section id="display">
-      <input type="text" class="calculator-screen" value="399,981" disabled />
-    </section>
+      <section id="display">
+        <input type="text" class="calculator-screen" value="399,981" disabled />
+      </section>
 
-    <section id="keyGrid">
-    <button type="button" value="7">7</button>
-    <button type="button" value="8">8</button>
-    <button type="button" value="9">9</button>
-    <button type="button" value="" class="del">del</button>
+      <section class="keyGrid">
+        <button type="button" value="7">7</button>
+        <button type="button" value="8">8</button>
+        <button type="button" value="9">9</button>
+        <button type="button" data-action="delete" value="" class="del">del</button>
 
-    
-    <button type="button" value="4">4</button>
-    <button type="button" value="5">5</button>
-    <button type="button" value="6">6</button>
-    <button type="button" class="operator" value="+">+</button>
 
-    <button type="button" value="1">1</button>
-    <button type="button" value="2">2</button>
-    <button type="button" value="3">3</button>
-    <button type="button" class="operator" value="-">-</button>
+        <button type="button" value="4">4</button>
+        <button type="button" value="5">5</button>
+        <button type="button" value="6">6</button>
+        <button type="button"  data-action="add" class="operator" value="+">+</button>
 
-    
-    <button type="button" class="decimal" value=".">.</button>
-    <button type="button" value="0">0</button>
-    <button type="button" class="operator" value="/">/</button>
-    
-    <button type="button" class="operator" value="*">x</button>
+        <button type="button" value="1">1</button>
+        <button type="button" value="2">2</button>
+        <button type="button" value="3">3</button>
+        <button type="button" data-action="subtract" class="operator" value="-">-</button>
 
+
+        <button type="button" data-action="decimal" class="decimal" value=".">.</button>
+        <button type="button" value="0">0</button>
+        <button type="button" data-action="divide" class="operator" value="/">/</button>
+
+        <button type="button" data-action="multiply" class="operator" value="*">x</button>
 
 
 
 
 
 
-    <button type="button" class="clear" value="all-clear">reset</button>
 
-    <button type="button" class="equal-sign" value="=">=</button>
+        <button type="button" data-action="clear" class="clear" value="all-clear">reset</button>
 
-    </section>
+        <button type="button"  data-action="calculate" class="equal-sign" value="=">=</button>
+
+      </section>
     </div>
   </div>
 
@@ -81,6 +81,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
-  <script src="app.js"></script>
+  <script src="js/themes.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
