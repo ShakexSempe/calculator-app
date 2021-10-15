@@ -181,7 +181,6 @@ body {
   font-size: 1em;
   font-weight: 700;
   color: var(--mainText);
-  border: 1px solid yellow;
   overflow-x: hidden;
   text-overflow: ellipsis;
 }
