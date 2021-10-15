@@ -15,10 +15,12 @@ keys.addEventListener('click', e => {
         const action = key.dataset.action;
         const keyContent = key.textContent;
         const displayedNum = display.textContent;
-        // if statement
+        // log button type statement
         if (!action) {
             console.log('number key!')
-        }
+        } 
+
+
         if (
             action === 'add' ||
             action === 'subtract' ||
@@ -43,13 +45,16 @@ keys.addEventListener('click', e => {
 
 
         
-        // if state
+        // display key content 
         if (!action) {
             if (displayedNum === '0') {
                 display.textContent = keyContent;
             } else {
                 display.textContent = displayedNum + keyContent;
             }
+        }
+        if (action === 'decimal') {
+            display.textContent = displayedNum + '.';
         }
     }
 });
