@@ -15,6 +15,7 @@ keys.addEventListener('click', e => {
         const action = key.dataset.action;
         const keyContent = key.textContent;
         const displayedNum = display.textContent;
+        const previousKeyType = calculator.dataset.previousKeyType;
         // log button type statement
         if (!action) {
             console.log('number key!')
@@ -27,27 +28,57 @@ keys.addEventListener('click', e => {
             action === 'multiply' ||
             action === 'divide'
         ) {
-            console.log('operator key!')
+            console.log('operator key!');
+            key.classList.toggle('.active');
+            // when user hits a number key after an operator key
+            // method tell if the previous key is an operator key via a custom attribute: data-previous-key-type 
+            calculator.dataset.previousKeyType = 'operator';
+            // to save first number and the operator is to add it to a custom attribute when the operator button gets clicked.
+            calculator.dataset.firstValue = displayedNum;
+            calculator.dataset.operator = action;
         }
         if (action === 'decimal') {
-            console.log('decimal key!')
+            console.log('decimal key!');
         }
         if (action === 'clear') {
-            console.log('clear key!')
+            console.log('clear key!');
         }
-
+        // equal button logic
         if (action === 'calculate') {
-            console.log('equal key!')
+            console.log('equal key!');
+            const firstValue = calculator.dataset.firstValue;
+            const operator = calculator.dataset.operator;
+            const secondValue = displayedNum;
+            // calculate ();
+            // parseFloat() required to convert strings into a float number (decimal numbers)
+            let calculate = (n1, operator, n2) => {
+                let result = '';
+
+                if(operator === 'add') {
+                    result = parseFloat(n1) + parseFloat(n2);
+                } else if (operator === 'subtract') {
+                    result = parseFloat(n1) - parseFloat(n2);
+                } else if (operator === 'multiply') {
+                    result = parseFloat(n1) * parseFloat(n2);
+                } else if (operator === 'divide') {
+                    result = parseFloat(n1) / parseFloat(n2);
+                }
+
+                return result;
+            };
+            // end of calculate ();
+
+            display.textContent = calculate(firstValue, operator, secondValue);
         }
         if (action === 'delete') {
-            console.log('delete key')
+            console.log('delete key');
         }
-
+        
 
         
         // display key content 
         if (!action) {
-            if (displayedNum === '0') {
+            if (displayedNum === '0' || previousKeyType === 'operator') {
                 display.textContent = keyContent;
             } else {
                 display.textContent = displayedNum + keyContent;
