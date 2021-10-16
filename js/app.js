@@ -42,6 +42,8 @@ keys.addEventListener('click', e => {
         }
         if (action === 'clear') {
             console.log('clear key!');
+            display.textContent = displayedNum - displayedNum;
+            calculator.dataset.previousKeyType = 'clear'
         }
         // equal button logic
         if (action === 'calculate') {
@@ -71,7 +73,13 @@ keys.addEventListener('click', e => {
             display.textContent = calculate(firstValue, operator, secondValue);
         }
         if (action === 'delete') {
+            const firstValue = calculator.dataset.firstValue;
+            const operator = calculator.dataset.operator;
             console.log('delete key');
+            display.textContent = '0';
+            firstValue = 0;
+
+
         }
         
 
