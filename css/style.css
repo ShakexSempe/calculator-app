@@ -183,6 +183,13 @@ body {
   color: var(--mainText);
   overflow-x: hidden;
   text-overflow: ellipsis;
+  position: relative;
+}
+
+#display .calculator-screen span {
+  color: yellow;
+  position: absolute;
+  left: 0;
 }
 .output {
   color: var(--mainText);

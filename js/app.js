@@ -2,9 +2,6 @@ const calculator = document.querySelector('.calculator');
 const keys = calculator.querySelector('.keyGrid');
 const display = document.querySelector('.calculator-screen');
 
-
-
-
 //  listen for all key presses and 
 // (2) determine the type of key that is pressed.
 
@@ -43,7 +40,7 @@ keys.addEventListener('click', e => {
         if (action === 'clear') {
             console.log('clear key!');
             display.textContent = displayedNum - displayedNum;
-            calculator.dataset.previousKeyType = 'clear'
+            calculator.dataset.previousKeyType = 'clear';
         }
         // equal button logic
         if (action === 'calculate') {
@@ -93,7 +90,7 @@ keys.addEventListener('click', e => {
             }
         }
         if (action === 'decimal') {
-            display.textContent = displayedNum + '.';
+            display.textContent = displayedNum + ',';
         }
     }
 });
