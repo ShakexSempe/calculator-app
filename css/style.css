@@ -195,7 +195,9 @@ body {
   color: var(--mainText);
 }
 
-
+.is-depressed {
+  opacity: .5;
+}
 .keyGrid {
   border: none;
   outline: none;

@@ -14,11 +14,22 @@ keys.addEventListener('click', e => {
         const displayedNum = display.textContent;
         const previousKeyType = calculator.dataset.previousKeyType;
         // log button type statement
+        // Remove .is-depressed class from all keys
+        Array.from(key.parentNode.children)
+            .forEach(k => k.classList.remove('is-depressed'));
         if (!action) {
-            console.log('number key!')
+            console.log('number key!');
+            if (displayedNum === '0' || previousKeyType === 'operator') {
+                display.textContent = keyContent;
+            } else {
+                display.textContent = displayedNum + keyContent;
+                console.log(displayedNum);
+                console.log('appended number');
+                console.log(keyContent);
+            }
         } 
 
-
+        // operator keys
         if (
             action === 'add' ||
             action === 'subtract' ||
@@ -26,7 +37,8 @@ keys.addEventListener('click', e => {
             action === 'divide'
         ) {
             console.log('operator key!');
-            key.classList.toggle('.active');
+            // key.classList.toggle('.active');
+            key.classList.add('is-depressed');
             // when user hits a number key after an operator key
             // method tell if the previous key is an operator key via a custom attribute: data-previous-key-type 
             calculator.dataset.previousKeyType = 'operator';
@@ -34,9 +46,12 @@ keys.addEventListener('click', e => {
             calculator.dataset.firstValue = displayedNum;
             calculator.dataset.operator = action;
         }
+        // decimal key
         if (action === 'decimal') {
-            console.log('decimal key!');
+            display.textContent = displayedNum + ',';
         }
+        // clear(reset) key
+
         if (action === 'clear') {
             console.log('clear key!');
             display.textContent = displayedNum - displayedNum;
@@ -48,6 +63,10 @@ keys.addEventListener('click', e => {
             const firstValue = calculator.dataset.firstValue;
             const operator = calculator.dataset.operator;
             const secondValue = displayedNum;
+
+            console.log(firstValue);
+            console.log(operator);
+            console.log(secondValue);
             // calculate ();
             // parseFloat() required to convert strings into a float number (decimal numbers)
             let calculate = (n1, operator, n2) => {
@@ -74,32 +93,8 @@ keys.addEventListener('click', e => {
             const operator = calculator.dataset.operator;
             console.log('delete key');
             display.textContent = '0';
-            firstValue = 0;
-
-
         }
         
-
-        
-        // display key content 
-        if (!action) {
-            if (displayedNum === '0' || previousKeyType === 'operator') {
-                display.textContent = keyContent;
-            } else {
-                display.textContent = displayedNum + keyContent;
-            }
-        }
-        if (action === 'decimal') {
-            display.textContent = displayedNum + ',';
-        }
     }
 });
-
-// keys.addEventListener('click', e => {
-//     if (e.target.matches('button')) {
-//         const key = e.target;
-//         const action = key.dataset.action;
-        
-//     }
-// })
 
