@@ -45,6 +45,7 @@ keys.addEventListener('click', e => {
             // to save first number and the operator is to add it to a custom attribute when the operator button gets clicked.
             calculator.dataset.firstValue = displayedNum;
             calculator.dataset.operator = action;
+            display.textContent = keyContent;
         }
         // decimal key
         if (action === 'decimal') {
