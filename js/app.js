@@ -19,6 +19,7 @@ keys.addEventListener('click', e => {
             .forEach(k => k.classList.remove('is-depressed'));
         if (!action) {
             console.log('number key!');
+
             if (displayedNum === '0' || previousKeyType === 'operator') {
                 display.textContent = keyContent;
             } else {
@@ -27,6 +28,7 @@ keys.addEventListener('click', e => {
                 console.log('appended number');
                 console.log(keyContent);
             }
+            calculator.dataset.previousKey = 'number';
         } 
 
         // operator keys
@@ -49,10 +51,18 @@ keys.addEventListener('click', e => {
         }
         // decimal key
         if (action === 'decimal') {
-            display.textContent = displayedNum + ',';
-        }
-        // clear(reset) key
+            if (!displayedNum.includes(',')) {
+                display.textContent = displayedNum + ','
+            } else if (previousKeyType === 'operator') {
+                display.textContent = '0,'
+            }
 
+            calculator.dataset.previousKey = 'decimal';
+        }
+
+        
+
+        // clear(reset) key
         if (action === 'clear') {
             console.log('clear key!');
             display.textContent = displayedNum - displayedNum;
@@ -64,10 +74,6 @@ keys.addEventListener('click', e => {
             const firstValue = calculator.dataset.firstValue;
             const operator = calculator.dataset.operator;
             const secondValue = displayedNum;
-
-            console.log(firstValue);
-            console.log(operator);
-            console.log(secondValue);
             // calculate ();
             // parseFloat() required to convert strings into a float number (decimal numbers)
             let calculate = (n1, operator, n2) => {
@@ -86,8 +92,9 @@ keys.addEventListener('click', e => {
                 return result;
             };
             // end of calculate ();
-
             display.textContent = calculate(firstValue, operator, secondValue);
+            calculator.dataset.previousKeyType = 'calculate';
+
         }
         if (action === 'delete') {
             const firstValue = calculator.dataset.firstValue;
