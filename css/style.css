@@ -52,11 +52,12 @@ body {
 
 #main {
   background: var(--background);
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   place-items: center;
   margin-bottom: 5vh;
   overflow: hidden;
+  padding-top: .5rem;
 
 }
 
@@ -134,9 +135,8 @@ button {
   width: 100%;
   background-color: var(--outputKey);
   color: var(--keypadText);
-  font-size: .85em;
+  font-size: .8em;
   padding: .5em;
-  overflow: hidden;
   border-radius: 5px;
   transition: .125s ease;
   position: relative;
