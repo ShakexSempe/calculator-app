@@ -45,9 +45,10 @@ html {
 }
 
 body {
-  background: #ddd;
+  background: var(--display);
   color: var(--mainText);
   font-size: 32px;
+  padding-bottom: 1rem;
 }
 
 #main {
