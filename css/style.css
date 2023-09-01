@@ -246,13 +246,13 @@ button.clear::after , button.del::after {
   margin-right: 1rem;
 }
 #theme-options-wrapper {
-  padding: .125rem;
+  padding: .25rem;
   border-radius: 20px;
   background-color: var(--toggleBackground);
   display: flex;
   justify-content: center; 
   position: relative;
-  gap: .25rem;
+  gap: .5rem;
 }
 
 .theme-dot {
@@ -260,11 +260,10 @@ button.clear::after , button.del::after {
   width: 15px;
   background-color: transparent;
   border-radius: 50%;
-  margin: 4px;
   border: none;
-  cursor: pointer;
-  transition: .3s ease; 
+  transition: .25s ease; 
   position: relative;
+  cursor: default;
 }
 .theme-dot::after {
   position: absolute;
@@ -275,8 +274,8 @@ button.clear::after , button.del::after {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  box-shadow: inset 1px 1px 3px #fffa,
-              inset -1px -1px 3px #000a;
+  box-shadow: inset 1px 1px 3px #fff5,
+              inset -1px -1px 3px #0005;
 }
 .theme-dot.active.theme-dot::after {
   opacity: 1;
@@ -310,4 +309,11 @@ button.clear::after , button.del::after {
   opacity: 1;
   background-color: hsl(176, 100%, 44%);
 
+}
+
+.theme-dot:active.theme-dot{
+  transform: translateX(.125rem);
+}
+.theme-dot:active.theme-dot:nth-child(3){
+  transform: translateX(-.125rem);
 }
