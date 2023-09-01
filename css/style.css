@@ -82,7 +82,7 @@ body {
 #display {
   background-color: var(--display);
   margin: 1.5rem 0;
-  padding: 1.5rem;
+  height: 5rem;
   
   display: flex;
   justify-content: right;
@@ -94,9 +94,9 @@ body {
 }
 
 #display .calculator-screen {
-  height: 100%;
   background-color: transparent;
   text-align: right;
+  padding: 1rem;
   font-size: 1em;
   font-weight: 700;
   color: var(--mainText);
