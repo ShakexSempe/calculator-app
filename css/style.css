@@ -239,18 +239,16 @@ button.clear::after , button.del::after {
 .themes {
   display: flex;
   align-items: center;
-  border-radius: 20px;
-  background-color: var(--toggleBackground);
   position: relative;
-  padding: .125rem;
 }
 .themes h2 {
   font-size: .7em;
-  margin-right: 1em;
-  position: absolute;
-  left: -100%;
+  margin-right: 1rem;
 }
 #theme-options-wrapper {
+  padding: .125rem;
+  border-radius: 20px;
+  background-color: var(--toggleBackground);
   display: flex;
   justify-content: center; 
   position: relative;
