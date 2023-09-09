@@ -257,6 +257,7 @@ button.clear::after , button.del::after {
 .themes h2 {
   font-size: .7em;
   margin-right: 1rem;
+  letter-spacing: 1px;
 }
 #theme-options-wrapper {
   padding: .25rem;
