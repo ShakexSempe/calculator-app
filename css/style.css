@@ -95,7 +95,7 @@ body {
 #display .calculator-screen {
   background-color: transparent;
   text-align: right;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   font-size: 1em;
   font-weight: 700;
   color: var(--mainText);
