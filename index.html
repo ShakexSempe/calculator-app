@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
   <!-- theme link -->
   <link id="theme-style" rel="stylesheet" type="text/css" href="">
   <title>Frontend Mentor | Calculator app</title>
-
-  <style>
-    
-  </style>
 </head>
+
 <body>
 
   <div id="main">
 
     <div class="calculator">
+      <!-- HEADER = LOGO[H1] + THEMES CHANGER[FLEX CONTAINER] -->
       <header id="header">
         <h1>calc</h1>
         <div class="themes">
@@ -30,11 +30,11 @@
           </div>
         </div>
       </header>
-
+      <!-- CALCULATOR SCREEN -->
       <section id="display">
         <div class="calculator-screen">0</div>
       </section>
-
+      <!-- CALCULATOR KEY GRID [GRID LAYOUT] -->
       <section class="keyGrid">
         <button type="button" value="7">7</button>
         <button type="button" value="8">8</button>
@@ -45,7 +45,7 @@
         <button type="button" value="4">4</button>
         <button type="button" value="5">5</button>
         <button type="button" value="6">6</button>
-        <button type="button"  data-action="add" class="operator" value="+">+</button>
+        <button type="button" data-action="add" class="operator" value="+">+</button>
 
         <button type="button" value="1">1</button>
         <button type="button" value="2">2</button>
@@ -59,29 +59,22 @@
 
         <button type="button" data-action="multiply" class="operator" value="*">x</button>
 
-
-
-
-
-
-
         <button type="button" data-action="clear" class="clear" value="all-clear">reset</button>
 
-        <button type="button"  data-action="calculate" class="equal-sign" value="=">=</button>
+        <button type="button" data-action="calculate" class="equal-sign" value="=">=</button>
 
       </section>
+      
     </div>
 
   </div>
 
-  
-
-  
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. <br> 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. <br>
     Coded by <a href="https://shakexsempe.netlify.app/">Shakex Sempe</a>.
   </div>
   <script src="js/themes.js"></script>
   <script src="js/app.js"></script>
 </body>
+
 </html>
