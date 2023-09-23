@@ -228,7 +228,8 @@ button.clear::after , button.del::after {
 /* media query */
 @media screen and (min-width: 1024px) {
   .calculator {
-    padding: 10vh 30vw;
+    padding: 10vh 10vw;
+    width: 50%;
   }
 
   #display {
